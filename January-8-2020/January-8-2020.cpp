@@ -15,7 +15,7 @@ int main()
 
     //convert to kg and print
     double kilograms = pounds * 0.454;
-    cout << kilograms << endl;
+    cout << kilograms << " is the weight in kilograms" << endl;
 
     //get hexagon side value
     double hexagonSide = 0;
@@ -26,7 +26,7 @@ int main()
     double area = 0;
     double multiplier = (3 * sqrt(3)) / 2;
     area = multiplier * pow(hexagonSide, 2);
-    cout << area << endl;
+    cout << area << " is the area of the hexagon" << endl;
 
     //get int values from user
     int first = 0;
@@ -36,10 +36,11 @@ int main()
     cout << "Please enter an second interger value" << endl;
     cin >> second;
 
-    //display a larger value by adding heir absolute values 
-    first = abs(first);
-    second = abs(second);
-    int larger = first + second + 1;//+1 in case both are 0
-    cout << larger << endl;
+    //display the larger value 
+    int larger = second;
+    if (first > second) {
+        larger = first;
+    }
+    cout << larger << " is the larger value" << endl;
     return 0;
 }
